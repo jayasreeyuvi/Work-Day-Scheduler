@@ -10,7 +10,7 @@ $(function () {
   setInterval(todisplayTime, 1000);
 
   var saveBtn = $(".saveBtn")
-  
+
   saveBtn.on("click" , function() {
    
     let timeBlock = $(this).parent()
@@ -22,7 +22,16 @@ $(function () {
       localStorage.removeItem(timeBlockId)
     }
   })
+  
 
+  var timeBlock = $(".time-block");
+
+  timeBlock.each(function () {
+    var timeBlockId = $(this).attr("id");
+    var textArea = $(this).find("textarea");
+    var textAreaValue = localStorage.getItem(timeBlockId);
+    textArea.val(textAreaValue);
+  });
     
 
 });

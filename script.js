@@ -14,25 +14,28 @@ $(function () {
   saveBtn.on("click" , function() {
    
     let timeBlock = $(this).parent()
-    let timeBlockId = timeBlock.attr("id")
+    let timekey = timeBlock.attr("id")
     let textArea = timeBlock.find("textarea")
     let textAreaValue = textArea.val()
-    localStorage.setItem(timeBlockId , textAreaValue)
+    localStorage.setItem(timekey , textAreaValue)
     if ( textAreaValue === "" ) {
-      localStorage.removeItem(timeBlockId)
+      localStorage.removeItem(timekey)
     }
   })
   
-
   var timeBlock = $(".time-block");
 
   timeBlock.each(function () {
-    var timeBlockId = $(this).attr("id");
+    var timekey = $(this).attr("id");
     var textArea = $(this).find("textarea");
-    var textAreaValue = localStorage.getItem(timeBlockId);
+    var textAreaValue = localStorage.getItem(timekey);
     textArea.val(textAreaValue);
   });
-    
+
+  var currentHour = dayjs().hour();
+
+  //time block for each section//
+  
 
 });
   

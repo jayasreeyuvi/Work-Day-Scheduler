@@ -37,6 +37,12 @@ SOFTWARE.
 
 ## Screenshot
 
+- Display time
+![Alt text](https://user-images.githubusercontent.com/114691852/230518416-b2ed19a6-49ed-4268-b7fc-3afabc2b21bc.jpeg)
+
+- Click the save button to save your task to local storage
+![Alt text](https://user-images.githubusercontent.com/114691852/230518483-05fdadc3-f0fa-445d-b3d1-909eeab4aa99.jpeg)
+
 
 ## Usage
 
